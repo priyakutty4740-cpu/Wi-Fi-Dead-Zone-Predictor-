@@ -1,20 +1,33 @@
-# Wi-Fi Dead-Zone Predictor
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wi-Fi Dead-Zone Predictor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-## Project Description
-An AI-based web application that predicts weak Wi-Fi signal areas using signal strength, router distance, and wall count.
+<body>
 
-## Features
-- Wi-Fi signal prediction
-- Dead-zone detection
-- Simple user-friendly interface
-- Signal status: Good, Weak, or Dead Zone
+  <div class="container">
+    <h1>📶 Wi-Fi Dead-Zone Predictor</h1>
+    <p>Predict your Wi-Fi signal condition</p>
 
-## Technologies Used
-- HTML
-- CSS
-- JavaScript
+    <label>Distance from Router (meters)</label>
+    <input type="number" id="distance" placeholder="Example: 15">
 
-## Future Scope
-- Machine Learning prediction
-- Real-time Wi-Fi signal data
-- Floor-plan based Wi-Fi mapping
+    <label>Number of Walls</label>
+    <input type="number" id="walls" placeholder="Example: 2">
+
+    <label>Signal Strength (dBm)</label>
+    <input type="number" id="signal" placeholder="Example: -70">
+
+    <button onclick="predictSignal()">Predict Signal</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
